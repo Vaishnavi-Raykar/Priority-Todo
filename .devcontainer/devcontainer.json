@@ -1,13 +1,9 @@
 {
   "name": "todolist",
   "image": "ghcr.io/daytonaio/go-devcontainer:latest",
-  "forwardPorts": [],
-  "containerEnv": {
-    "LOG_LEVEL": "debug",
-    "DAYTONA_SERVER_MODE": "development",
-    "CGO_ENABLED": "0",
-    "DAYTONA_WS_ID": ""
-  },
+  "forwardPorts": [
+    3000
+  ],
   "customizations": {
     "vscode": {
       "settings": {
@@ -23,6 +19,5 @@
       ]
     }
   },
-  "postCreateCommand": ".devcontainer/postcreate.sh",
-  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+  "postCreateCommand": ".devcontainer/postcreate.sh"
 }
